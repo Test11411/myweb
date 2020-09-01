@@ -1,7 +1,10 @@
 pipeline{
     agent any
+    environment{
+    	PATH= "/media/maven-3.6/bin:$PATH"
+	}
         stages{
-            stage("Git Checkout"){
+            stage("Git Checko/media/maven-3.6/binut"){
                 steps{
                     git credentialsId: 'Git_credentials', url: 'https://github.com/Test11411/myweb'
 		            echo "Git checkout is successful"
