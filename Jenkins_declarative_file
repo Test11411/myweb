@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-    	PATH= "/media/maven-3.6/bin:$PATH"
+    	PATH= "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el8_2.x86_64/jre/bin:$PATH:/media/maven-3.6/bin:$PATH"
 	}
         stages{
             stage("Git Checko/media/maven-3.6/binut"){
