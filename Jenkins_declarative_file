@@ -4,7 +4,7 @@ pipeline{
         stage('GIt Checkout'){
             steps{
                 git credentialsId: 'Github_credentials1', url: 'https://github.com/Test11411/myweb'
-                echo "Git Checkout Successful ....."
+                echo "Git Checkout Successful ......"
             }
        }
        stage('Maven Build'){
