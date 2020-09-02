@@ -4,7 +4,7 @@ pipeline{
     	PATH= "/media/maven-3.6/bin:$PATH"
 	}
         stages{
-            stage("Git Checko/media/maven-3.6/binut"){
+            stage("Git Checkout /media/maven-3.6/bin"){
                 steps{
                     git credentialsId: 'Git_credentials', url: 'https://github.com/Test11411/myweb'
 		            echo "Git checkout is successful"
@@ -12,7 +12,7 @@ pipeline{
             }
             stage("Maven Build"){
                 steps{
-                    sh "mvn clean package"
+                    sh "mvn clean test"
 		    sh "mv target/*.war target/myweb.war"
                 }
             }
